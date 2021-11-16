@@ -1,0 +1,33 @@
+@url = http://localhost:3016
+
+### show all useres
+GET http://localhost:3016
+content-type: application/json
+
+### delete a user
+ DELETE http://localhost:3016/deleteuser/6192325f11c16a48757f9a65
+ content-type: application/json
+
+
+### add a user
+ POST {{url}}/adduser
+ content-type: application/json
+
+ {
+	 
+"user": {
+"name": "Jim Smithhhh",
+ "username": "jim_smith",
+  "email": "js@gmail.com"
+}
+
+}
+
+### udpate a user
+ PATCH {{url}}/edituser/6192323ae5ad5411032013c4
+content-type: application/json
+
+{
+"email": "asmithhh@yahoo.com"
+}
+

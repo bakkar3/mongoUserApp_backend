@@ -1,0 +1,6 @@
+mongosh "mongodb+srv://cluster0.qtqt3.mongodb.net/myFirstDatabase" --username user-1
+
+                   cluster0-shard-00-02.qtqt3.mongodb.net:27017
+mongoimport --host cluster0-shard-00-02.qtqt3.mongodb.net:27017 --db blogapp --collection articles --type json --file articles.json --jsonArray --authenticationDatabase admin --ssl --username user-1
+mongoimport --host cluster0-shard-00-02.qtqt3.mongodb.net:27017 --db blogapp --collection articles --type json --file articles.json --jsonArray --authenticationDatabase admin --ssl --username user2
+mongoimport --host cluster0-shard-00-01.ogshn.mongodb.net:27017 --db blogapp --collection articles --type json --file articles.json --jsonArray --authenticationDatabase admin --ssl --username mainuser
