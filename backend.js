@@ -1,10 +1,15 @@
 import express from "express";
 import mongodb, { MongoClient } from "mongodb";
 import cors from "cors";
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 const app = express();
-const port = 3016;
-const mongoConnectString = "mongodb://localhost:27017";
+const port = process.env.PORT || 3016;
+// const port = 3016;
+const mongoConnectString = process.env.MONGODB_URI;
+// const mongoConnectString = "mongodb://localhost:27017";
 const client = new MongoClient(mongoConnectString);
 
 app.use(cors());
