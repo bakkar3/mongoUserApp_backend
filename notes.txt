@@ -18,5 +18,6 @@ mongodb+srv://user2:passpass@cluster0.qtqt3.mongodb.net/test
 mongoimport --host cluster0-shard-00-02.qtqt3.mongodb.net:27017 --db api001 --collection users100 --type json --file users100.json --jsonArray --authenticationDatabase admin --ssl --username user2
 
 heroku logs -a heroku-mongodb-backend --tail
+test
 
 
